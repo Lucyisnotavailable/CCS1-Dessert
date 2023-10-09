@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-top: 1px dashed #000; /* 虚线分隔线 */
+            padding-top: 20px; /* 上方间距 */
+        }
+        
+        .image-and-text {
+            flex-basis: 48%; /* 图片和文字各占48%的宽度 */
+            text-align: center;
+        }
+
+        .image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .text {
+            margin-top: 10px; /* 文字上方间距 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-and-text">
+            <img src="left-image.jpg" alt="左侧图片" class="image">
+            <p class="text">左侧文字内容</p>
+        </div>
+        <div class="image-and-text">
+            <img src="right-image.jpg" alt="右侧图片" class="image">
+            <p class="text">右侧文字内容</p>
+        </div>
+    </div>
+</body>
+</html>
