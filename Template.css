@@ -949,6 +949,24 @@ button {
 }
 
 
+.reviews4 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 600px; 
+    margin-top: -230px;
+}
+.review44 {
+    background-color: #fefefe;
+    color: #942329;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-top: 10px;
+    width:360px;
+    height:120px;
+    margin-right: 10px;
+    background-color: white;
+}
+
 
 
 
