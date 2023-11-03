@@ -1127,3 +1127,72 @@ button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
 }
+
+
+
+
+
+
+
+
+
+/*sidebar*/
+#fixed-buttonright-container {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 9999; 
+}
+
+#fixed-button {
+    background-color:#C88388;
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+/* sidebar.css */
+/* 侧边栏样式 */
+#sidebar{
+    position: fixed;
+    bottom: 10px;
+    z-index: 9999;
+    background-color: #FFF5EC;
+    width: 800px;
+    left:-800px;
+    transition: left 0.3s;
+}
+
+/* 按钮样式 */
+#toggle-sidebar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 999; /* 使按钮位于顶层 */
+}
+
+
+.scroll-button {
+    background-color: #C88388;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
