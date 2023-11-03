@@ -697,6 +697,22 @@ button[type="submit"] img {
             width:400px;
         }
 
+.dessertstitle2 
+{
+            white-space: nowrap;
+            text-align: center;
+            font-size: 25px;
+            font-style: italic;
+            color:white ;
+            font-family: Verdana;
+            background-color:#EEB7B0;
+            padding: 10px 20px;
+            border-radius: 10px; 
+            border:3px solid #EEB7B0;
+            width:400px;
+            transition: opacity 0.3s ease-in-out;
+        }
+
 
 .pictures img {
     height:450px;
@@ -799,6 +815,16 @@ button[type="submit"] img {
     font-family: "Comic Sans MS", cursive;
     margin-left: -470px;
 }
+
+.dessert-description2
+{
+    display: flex;
+    font-size: 20px;
+    color:#942329;
+    font-family: "Comic Sans MS", cursive;
+    margin-left: -470px;
+    transition: opacity 0.3s ease-in-out;
+}
     
 .user-info {
     display: flex;
@@ -842,6 +868,7 @@ button[type="submit"] img {
 }
 
 
+
 /*sos*/
 .flavor-container {
     position: absolute;
@@ -874,13 +901,21 @@ button[type="submit"] img {
 #flavor-buttons {
     display: flex;
     justify-content: center;
+    cursor: pointer;
+}
+
+.flavor-button:hover{
+    cursor: pointer;
 }
 
 button {
     margin: 5px;
 }
 
-
+.flimg {
+    height:450px;
+    width:450px;
+}
 
 
 
