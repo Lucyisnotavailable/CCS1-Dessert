@@ -4,7 +4,8 @@ document.getElementById('arrow').addEventListener('click', function() {
   if (sidebar.style.left === '30px') 
   {
     sidebar.style.left = '-800px'; 
-  } else {
+  } 
+  else {
     sidebar.style.left = '30px'; 
   }
 });
@@ -17,10 +18,10 @@ const flavorButtons = document.querySelectorAll(".flavor-button");
 
 // 获取要更新的元素
 const dessertTitle        = document.querySelector(".dessertstitle2");
-const dessertImage        = document.querySelector(".flimg");
-const dessertDescription  = document.querySelector(".dessert-description2");
+var dessertImage        = document.querySelector(".flimg");
+let dessertDescription  = document.querySelector(".dessert-description2");
 const dessertReview1      = document.querySelector(".javatext1");
-const dessertReview2      = document.querySelector(".javatext2");
+var dessertReview2      = document.querySelector(".javatext2");
 
 
 const flavors = {
@@ -30,12 +31,12 @@ const flavors = {
         description: "Price: ₱ 310.00<br>-Crunchy and creamy frozen cookies, layered with butter cream sandwiched between two cashew-meringue wafers, coated with cookie crumbs. It is best described as the cookie version of a Sans Rival.",
         reviews1:"★★★★☆<br>It's delicious, but it's too sweet, and you also can't eat too much of it. However, it has a rich flavor and a special texture.",
         reviews2:"★★★★★<br>Excellent! This dessert is my childhood fav, this is a bit sweet, cold but so good!",
-    },
+     },
 
     flavorchoco: {
         title: "Silvanas (Chocolate)",
         imageSrc: "silvannaschocolate.jpg",
-        description: "Price: ₱ 330.00<br>-Chocolate Silvanas are a delectable Filipino dessert that consists of layers of chocolate meringue wafers, creamy chocolate buttercream, and a coating of finely crushed cashew nuts. These sweet treats are known for their rich and indulgent chocolate flavor, delicate crispiness from the meringue, and a satisfying nutty crunch from the cashews.",
+        description: "Price: ₱ 330.00<br>-Chocolate Silvanas are a delectable Filipino dessert that consists of layers of chocolate meringue wafers, creamy chocolate buttercream, and a coating of finely crushed cashew nuts.",
         reviews1:"★★★☆☆<br>I'm very picky about chocolate, and this is not good enough for me.",
         reviews2:"★★★★★<br>I am not fond of chocolate stuff, but this taste good! ",
       },
@@ -43,7 +44,7 @@ const flavors = {
     flavorsta: {
         title: "Silvanas (Strawberry)",
         imageSrc: "silvannasstrawberryy.jpg",
-        description: "Price: ₱ 325.00<br>-These sweet treats feature layers of strawberry-flavored meringue wafers sandwiched between a luscious strawberry buttercream filling. Strawberry Silvanas provide a refreshing and summery take on this beloved dessert, making them a perfect choice for those who enjoy the sweet and tangy taste of strawberries.",
+        description: "Price: ₱ 325.00<br>-These sweet treats feature layers of strawberry-flavored meringue wafers sandwiched between a luscious strawberry buttercream filling.Strawberry Silvanas provide a refreshing and summery take on this beloved dessert.",
         reviews1:"★★★☆☆<br>Chemical strawberry flavor, I think it's average",
         reviews2:"★★★★★<br>My nephew loves this so much, he keeps requesting for this. This is not so sweet nor so bland.",
       },
