@@ -52,6 +52,76 @@ body   {
 
 
 
+/*contact box*/
+#chat-container {
+    position: relative;
+    width: 500px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background-color:#C88388;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-right: 50px;
+  }
+  
+
+  #chat-history {
+    max-height: 125px;
+    overflow: auto;
+    font-size: 20px;
+    background-color: #FFF5EC;
+    border-radius: 2px;
+    color:black;
+    padding: 0 10px;
+  }
+  
+  #input-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+  
+  #reply-box {
+    width:500px;
+    margin-left: -10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+
+  
+  .button {
+    display: inline-block;
+    padding: 10px 12px;
+    background-color:#FFF5EC;
+    color:#942329;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-bottom: 4px;
+    margin-right: 0;
+    margin-left: -70px;
+    cursor: pointer;
+    border: #F3CDC6 1px solid;
+    vertical-align:middle;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -130,6 +200,30 @@ nav a 	{
             cursor: pointer;
         }
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*search box*/
+
 .search {
             display: flex;
             align-items: center;
@@ -174,6 +268,7 @@ nav a 	{
             font-size: 18px;
                 }	 
         
+            
 input[type="text"] {
             padding: 10px;
             border: none;
@@ -590,8 +685,9 @@ button[type="submit"] img {
                 background-color: #EEB7B0;
                 color: #fff;
                 padding: 10px;
-                margin: 10px 0;
+                margin: 5px 0;
                 border-radius: 5px;
+                font-size: 20px;
             }
             
 .message p {
@@ -923,9 +1019,6 @@ button[type="submit"] img {
     cursor: pointer;
 }
 
-button {
-    margin: 5px;
-}
 
 .flimg {
     height:450px;
@@ -1173,26 +1266,6 @@ button {
 
 
 
-
-
-
-
-/*Chat*/
-#fixed-buttonright-container {
-    position: fixed;
-    bottom: 20px; 
-    right: 20px; 
-    z-index: 9999; 
-}
-
-#fixed-button {
-    background-color:#C88388;
-    color: #fff; 
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
 
 
 
