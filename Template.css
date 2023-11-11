@@ -57,7 +57,7 @@ body   {
     position: relative;
     width: 500px;
     margin-top: 20px;
-    margin-left: auto;
+    margin-left: 50px;
     margin-bottom: 20px;
     margin-right: 20px;
     background-color:#C88388;
@@ -275,16 +275,52 @@ input[type="text"] {
             font-size: 20px;
             border-radius: 3px;}
         
-button[type="submit"] {
+button[type="button"] {
             background-color: transparent;
             border: none;
             cursor: pointer;
         }
         
-button[type="submit"] img {
+button[type="button"] img {
             width: 20px;
             height: 20px;
         }
+
+
+
+
+
+
+/*顶端底端*/
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    background-color: #94232993;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+  }
+  
+
+  .scroll-to-bottom {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    background-color: #94232993;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+  }
+
+
+
+
+
 
 
 

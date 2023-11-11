@@ -10,12 +10,80 @@ document.getElementById('arrow').addEventListener('click', function() {
   }
 });
 
+//顶部底部
+document.addEventListener("DOMContentLoaded", function () {
+  var scrollToTopButton = document.getElementById("scrollToTop");
+  var scrollToBottomButton = document.getElementById("scrollToBottom");
+
+  window.onscroll = function () {
+    // Show or hide the buttons based on the scroll position
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollToTopButton.style.display = "block";
+    } else {
+      scrollToTopButton.style.display = "none";
+    }
+
+    if (
+      window.innerHeight + window.scrollY >= document.body.offsetHeight
+    ) {
+      // We are at the bottom of the page
+      scrollToBottomButton.style.display = "none";
+    } else {
+      scrollToBottomButton.style.display = "block";
+    }
+  };
+
+  // Scroll to top function with smooth scrolling
+  scrollToTopButton.onclick = function () {
+    smoothScrollTo(0);
+  };
+
+  // Scroll to bottom function with smooth scrolling
+  scrollToBottomButton.onclick = function () {
+    smoothScrollTo(document.body.scrollHeight);
+  };
+
+  // Smooth scroll function
+  function smoothScrollTo(targetPosition) {
+    var currentPosition = window.scrollY || document.documentElement.scrollTop;
+
+    function scroll() {
+      currentPosition = currentPosition + (targetPosition - currentPosition) / 10;
+
+      // Check if we've reached the target position
+      if (Math.abs(currentPosition - targetPosition) < 1) {
+        window.scrollTo(0, targetPosition);
+      } else {
+        window.scrollTo(0, currentPosition);
+        requestAnimationFrame(scroll);
+      }
+    }
+
+    scroll();
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //flavor change
 const flavorButtons = document.querySelectorAll(".flavor-button");
 
-
+//设定一下元素
 const dessertTitle        = document.querySelector(".dessertstitle2");
 var dessertImage        = document.querySelector(".flimg");
 let dessertDescription  = document.querySelector(".dessert-description2");
@@ -38,6 +106,7 @@ flavorButtons.forEach(button =>
       });
   });
 
+//yeah the more easy part copy paste
 const flavors = {
     flavorbutter: {
         title: "Silvanas (Butter)",
@@ -80,7 +149,7 @@ const flavors = {
       },
 
 
-};
+};//end of my life
 
 
 
@@ -113,54 +182,24 @@ document.getElementById("reply-box").addEventListener("keypress", function (e) {
 
 
 
+/*Search*/
+    function searchDesserts() {
+        // 获取文本
+        var searchTerm = document.getElementById("searchBox").value.toLowerCase();
 
+        // 获取甜点元素
+        var dessertTitles = document.querySelectorAll('.dessertstitle, .dessertstitle2');
 
+        // 遍历所有标题，查找匹配的甜点
+        for (var i = 0; i < dessertTitles.length; i++) {
+            var titleText = dessertTitles[i].innerText.toLowerCase();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  var searchInput = document.querySelector('.search input[type="text"]');
-  var searchResultsBox = document.getElementById('searchResults');
-
-  // 监听搜索框的输入事件
-  searchInput.addEventListener('input', function () {
-      // 显示结果框
-      searchResultsBox.style.display = 'block';
-  });
-
-  // 监听页面的点击事件
-  document.addEventListener('click', function (event) {
-      // 如果点击事件不是来自搜索框或结果框，则隐藏结果框
-      if (!searchResultsBox.contains(event.target) && event.target !== searchInput) {
-          searchResultsBox.style.display = 'none';
-      }
-  });
-
-  // 阻止结果框点击事件冒泡，以防止被点击时隐藏
-  searchResultsBox.addEventListener('click', function (event) {
-      event.stopPropagation();
-  });
-
-  // 监听搜索框的失去焦点事件
-  searchInput.addEventListener('blur', function () {
-      // 延迟一小段时间后隐藏结果框，以允许点击事件触发
-      setTimeout(function () {
-          searchResultsBox.style.display = 'none';
-      }, 200);
-  });
-});
+            // 检查标题
+            if (titleText.includes(searchTerm)) {
+                // 找到匹配,滚
+                dessertTitles[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+                break; 
+                //hate my life
+            }
+        }
+    }
