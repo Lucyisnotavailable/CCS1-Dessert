@@ -1,3 +1,9 @@
+
+
+
+
+
+
 //sidebar
 document.getElementById('arrow').addEventListener('click', function() {
   const sidebar = document.getElementById('sidebar');
@@ -10,47 +16,64 @@ document.getElementById('arrow').addEventListener('click', function() {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //顶部底部
 document.addEventListener("DOMContentLoaded", function () {
   var scrollToTopButton = document.getElementById("scrollToTop");
   var scrollToBottomButton = document.getElementById("scrollToBottom");
 
   window.onscroll = function () {
-    // Show or hide the buttons based on the scroll position
+    // 隐藏往上按钮
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       scrollToTopButton.style.display = "block";
     } else {
       scrollToTopButton.style.display = "none";
     }
-
+    //隐藏往下
     if (
       window.innerHeight + window.scrollY >= document.body.offsetHeight
     ) {
-      // We are at the bottom of the page
+      
       scrollToBottomButton.style.display = "none";
     } else {
       scrollToBottomButton.style.display = "block";
     }
   };
 
-  // Scroll to top function with smooth scrolling
-  scrollToTopButton.onclick = function () {
-    smoothScrollTo(0);
-  };
 
-  // Scroll to bottom function with smooth scrolling
-  scrollToBottomButton.onclick = function () {
-    smoothScrollTo(document.body.scrollHeight);
-  };
 
-  // Smooth scroll function
+scrollToTopButton.onclick = function () {
+  smoothScrollTo(0); // 传递顶部
+};
+
+
+scrollToBottomButton.onclick = function () {
+  smoothScrollTo(document.body.scrollHeight);
+};
+
+
+  //到顶部
   function smoothScrollTo(targetPosition) {
     var currentPosition = window.scrollY || document.documentElement.scrollTop;
 
     function scroll() {
-      currentPosition = currentPosition + (targetPosition - currentPosition) / 10;
+      currentPosition = currentPosition + (targetPosition - currentPosition) / 50;
 
-      // Check if we've reached the target position
+      // Check 
       if (Math.abs(currentPosition - targetPosition) < 1) {
         window.scrollTo(0, targetPosition);
       } else {
@@ -58,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
         requestAnimationFrame(scroll);
       }
     }
-
     scroll();
   }
 });
@@ -89,7 +111,6 @@ var dessertImage        = document.querySelector(".flimg");
 let dessertDescription  = document.querySelector(".dessert-description2");
 const dessertReview1      = document.querySelector(".javatext1");
 var dessertReview2      = document.querySelector(".javatext2");
-
 
 
 flavorButtons.forEach(button =>
@@ -155,6 +176,18 @@ const flavors = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*Contact box*/ 
 function appendMessage(message) {
   var chatHistory = document.getElementById("chat-history");
@@ -176,6 +209,22 @@ document.getElementById("reply-box").addEventListener("keypress", function (e) {
     replyWithThanks('If you have had a different experience with our desserts, we would love to hear from you. Please share your thoughts with us via email.'); // 回复
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
